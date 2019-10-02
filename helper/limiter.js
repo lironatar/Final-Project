@@ -8,7 +8,11 @@ module.exports= {
             collectionName: 'LoginApiLimiter'
         }),
         windowMs: 7*60*1000,
-        max:50
+        max:50,
+        handler:function handler(req,res) {
+            req.flash('error', 'אנא המתן לאחר שליחת דואר');
+            res.redirect('/home');
+        }
     }),
     postLimiter:new rateLimit({
         store: new MongoStore({
@@ -16,7 +20,11 @@ module.exports= {
             collectionName:'ContactusLimiter'
         }),
         windowMs: 7*60*1000,
-        max:1
+        max:1,
+        handler:function handler(req,res) {
+            req.flash('error', ' אנא המתן 7 דקות לאחר שליחת דואר נוסף');
+            res.redirect('/home');
+        }
     }),
     loginPostLimiter: new rateLimit({
         store: new MongoStore({
@@ -25,6 +33,10 @@ module.exports= {
         }),
         windowMs: 10*60*1000,
         max:5,
+        handler:function handler(req,res) {
+            req.flash('error', 'מצטערים, ניסית יותר מדי פעמים, אנא המתן 10 דקות');
+            res.redirect('/home');
+        }
         
     }),
     globalApiLimiter:rateLimit({

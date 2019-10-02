@@ -773,7 +773,12 @@ img{max-width:100%;}
 	margin-left: 36%;
 	height: 30vh;
 }
-
+@media screen and (max-width: 450px){
+	#dfuslogo{
+		height:25vh;
+		
+	}
+}
 /*--- Responsinator Code ---*/
 
 @media screen and (max-width: 1920px) {

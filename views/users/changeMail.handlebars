@@ -1,0 +1,39 @@
+<div class="row accountPage">
+    <div class="col sm-4 userSection ">
+        <div>
+            <h5  style="text-transform: capitalize">שלום {{user.fname}} {{user.lname}}</h5>
+        </div>
+        <div>
+            <li><a href="/profile">פרטי חשבון <i class="fa fa-md fa-user"></i></a></li>
+        </div>
+        <div>
+            <li><a href="/profile/changeName">שינוי שם <i class="fa fa-id-badge" aria-hidden="true"></i></a></li>
+        </div>
+        <div>
+            <li><a href="/profile/changeMail">שינוי מייל <i class="fa fa-md fa-envelope"></i></a></li>
+        </div>
+        <div>
+            <li><a href="/profile/changePass"> שינוי סיסמה <i class="fa fa-md fa-key"></i></a></li>
+        </div>
+        <div>
+            <li><a href="/logout">יציאה <i class="fa fa-md fa-sign-out"></i></a></li>
+        </div>
+    </div>
+    <div class="col sm-8 userActionSection">
+        <div style="margin-right:40%; margin-bottom:1.5%"><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i></div>
+        <h5>מייל נוכחי</h5>
+        <div><p>{{user.email}} </p></div>
+        <form action="/profile/changeMail" method="POST">
+            <div class="form-group">
+                <label for="email">שינוי מייל</label>
+                <input type="email" name="email" class="form-control" required=""  style="border-width:2px">
+                <br>
+                <label for="password">הכנס סיסמה נוכחית</label>
+                <input type="password" name="password" class="form-control" required=""  style="border-width:2px">
+                <div>
+                    <button class="btn btn-primary" type="submit" style="margin-top: 4%">לשינוי המייל <i class="fa fa-envelope-open" aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

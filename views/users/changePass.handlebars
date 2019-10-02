@@ -1,0 +1,39 @@
+<div class="row accountPage">
+    <div class="col sm-4 userSection">
+        <div>
+            <h5  style="text-transform: capitalize">שלום {{user.fname}} {{user.lname}}</h5>
+        </div>
+        <div>
+            <li><a href="/profile">פרטי חשבון <i class="fa fa-md fa-user"></i></a></li>
+        </div>
+        <div>
+            <li><a href="/profile/changeName">שינוי שם <i class="fa fa-id-badge" aria-hidden="true"></i></a></li>
+        </div>
+        <div>
+            <li><a href="/profile/changeMail">שינוי מייל <i class="fa fa-md fa-envelope"></i></a></li>
+        </div>
+        <div>
+            <li><a href="/profile/changePass"> שינוי סיסמה <i class="fa fa-md fa-key"></i></a></li>
+        </div>
+        <div>
+            <li><a href="/logout">יציאה <i class="fa fa-md fa-sign-out"></i></a></li>
+        </div>
+    </div>
+    <div class="col sm-8 userActionSection">
+        <h3>שכחת סיסמה?</h3>
+        <form action="/profile/changePass" method="POST">
+            <div class="form-group">
+                <label for="password">סיסמה עכשווית</label>
+                <input type="password" name="password" class="form-control" required="" style="border-width:2px">
+                <br>
+                <label for="newPassword">סיסמה חדשה</label>
+                <input type="password" name="newPassword" class="form-control" required="" style="border-width:2px">
+                <label for="confirmNewPassword">אשר את הסיסמה החדשה</label>
+                <input type="password" name="confirmNewPassword" class="form-control" required="" style="border-width:2px">
+                <div>
+                    <button class="btn btn-primary" type="submit" style="margin-top: 4%">לשינוי הסיסמה <i class="fa fa-lock"></i></button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

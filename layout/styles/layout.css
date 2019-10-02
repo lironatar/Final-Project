@@ -1211,6 +1211,20 @@ img{max-width:100%;}
     min-width: 15vw;
 	max-width:15vw;
 }
+@media screen and (max-width: 850px){
+	.images {
+		display:inline-block;
+		flex-direction: row;
+		align-items: center;
+		max-height: 300vh;
+		
+	}
+	.images img{
+		min-height: 195px;
+		min-width: 25vw;
+
+	}
+}
 @media screen and (max-width: 550px){
 	.images {
 		display: inline-block;
@@ -1221,6 +1235,7 @@ img{max-width:100%;}
 		min-width: 40vw;
 	}
 }
+
 
   /* change pass Page */
 .accountPage{

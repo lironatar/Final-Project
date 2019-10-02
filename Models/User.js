@@ -30,6 +30,10 @@ const UserSchema = new Schema({
         unique: false,
         max:255
     },
+    coupon:{
+        type:String,
+        default:moongose.Types.ObjectId
+    },
     date:{
         type:Date,
         default: Date.now

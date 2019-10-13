@@ -169,20 +169,7 @@ File: Layout CSS
 #footer input, #footer button{border:1px solid;}
 #footer input{display:block; width:100%; padding:8px;}
 #footer button{padding:8px 18px 10px; text-transform:uppercase; font-weight:700; cursor:pointer;}
-.afterline a::after{
-	
-}
-.afterline a::before{
-	display: inline-block;
-    margin: 0 5px 4px 0;
-	margin-left:10px;
-	margin-right:10px;
-    height: 2px;
-    content: " ";
-    text-shadow: none;
-    background-color: #999;
-    width: 15%;
-}
+
 
 
 /* Copyright
@@ -1199,7 +1186,9 @@ img{max-width:100%;}
     flex-wrap: wrap;
     align-items: flex-start;
     flex-direction: row;
-    max-height: 150vh;
+    width:100%;
+	max-height:100%;
+	padding-right:1rem;
 	
   }
 .images img {
@@ -1211,28 +1200,28 @@ img{max-width:100%;}
     min-width: 15vw;
 	max-width:15vw;
 }
-@media screen and (max-width: 850px){
-	.images {
-		display:inline-block;
-		flex-direction: row;
-		align-items: center;
-		max-height: 300vh;
+@media screen and (max-width:500px)
+{
+	.images{
 		
 	}
 	.images img{
-		min-height: 195px;
-		min-width: 25vw;
-
+		min-width: 42vw;
+		max-width: 42vw;
+		min-height: 250px;
+		max-height: 250px;
 	}
 }
-@media screen and (max-width: 550px){
-	.images {
-		display: inline-block;
-		max-height: 300vh;
+@media screen and (max-width:460px)
+{
+	.images{
+		
 	}
 	.images img{
-		min-height: 195px;
 		min-width: 40vw;
+		max-width: 40vw;
+		min-height: 250px;
+		max-height: 250px;
 	}
 }
 
@@ -1259,5 +1248,11 @@ img{max-width:100%;}
 	border: 1px solid black;
 	
 }
-/* profile page */
+/*end profile page */
 
+/* Cart start*/
+.cart{
+	
+}
+
+/* Cart end*/

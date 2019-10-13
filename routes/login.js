@@ -9,9 +9,14 @@ const {apiLimiter} = require('../helper/limiter');
 const {alreadyAuth} = require('../helper/auth');
 require('../Models/User');
 const User = mongoose.model('user');
-router.get('',apiLimiter, (req,res)=>{  //the route is blank because it is already set to /login
-    res.render('users/login');
-})
+require("../Models/Category");
+const Category = mongoose.model('category');
+
+router.get('',alreadyAuth, (req,res)=>{
+    Category.find({}).then(data =>{
+        res.render('users/login', {category:data})
+    }) 
+});
 
 
 router.post('',loginPostLimiter,alreadyAuth, (req,res, next)=>{

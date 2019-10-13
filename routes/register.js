@@ -8,8 +8,13 @@ const sanitize= require('mongo-sanitize');
 const router = express.Router();
 const {alreadyAuth} = require('../helper/auth');
 
-router.get('', (req,res)=>{
-    res.render('users/register'); 
+require("../Models/Category");
+const Category = mongoose.model('category');
+
+router.get('', alreadyAuth,(req,res)=>{
+    Category.find({}).then(data =>{
+        res.render('users/register', {category:data})
+    }) 
 });
 
 //Load User Schema

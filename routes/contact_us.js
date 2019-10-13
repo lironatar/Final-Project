@@ -2,9 +2,14 @@ const express = require ('express');
 const router = express.Router();
 const nodemailer= require('nodemailer');
 const {postLimiter} = require('../helper/limiter');
+const mongoose = require('mongoose');
+require("../Models/Category");
+const Category = mongoose.model('category');
 
 router.get('', (req,res)=>{
-    res.render('pages/contact_us');
+    Category.find({}).then(data =>{
+        res.render('pages/contact_us', {category:data})
+    }) 
 });
 
 

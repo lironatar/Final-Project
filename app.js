@@ -115,7 +115,7 @@ app.get('/pages/about_us', globalApiLimiter, (req,res)=>{
         res.render('pages/about_us', {category:data});
     })
 })
-app.get('/profile',ensureAuth,NoAdmin, (req,res)=>{
+app.get('/profile',ensureAuth, (req,res)=>{
     Category.find({}).then(data =>{
         res.render('users/profile', {category:data})
     })});

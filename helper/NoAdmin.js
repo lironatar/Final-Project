@@ -4,12 +4,11 @@
 
 module.exports ={
     NoAdmin: function(req ,res ,next){
-        if ( req.isAuthenticated() == false){
-            if (req.user.email == 'm44000@gmail.com'){
-                return next();
-            }
+        if (req.user.email == 'm44000@gmail.com'){
+            res.redirect('/admin');
         }
-        req.flash('error', 'לא להכנס לפה');
-        res.redirect('/home');
+        else{
+            return next();
+        }
     }
 }

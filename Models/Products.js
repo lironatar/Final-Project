@@ -7,10 +7,10 @@ const ProductsSchema = new Schema({
 
     title: String,
     text: String,
-    size: String,
+    size: Array,
     cover: String,
-    quanitity: Number,
-    price: Number,
+    quantity: Array,
+    price: Array,
     examplepics: String
 
 })

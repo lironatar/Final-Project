@@ -27,7 +27,7 @@ const changePass= require('./routes/changePass');
 const changeMail = require('./routes/changeMail');
 //Products Routes
 const pages = require('./routes/pages');
-const productsPage = require('./routes/products');
+const cart = require('./routes/cart');
 const adminRouter = require('./routes/adminBro');
 //DB config 
 const db = require('./config/db');
@@ -79,7 +79,7 @@ app.use(methodOverride('_method'));
 
 // Express Session
 app.use(session({
-    secret: 'sod',
+    secret: 'Huge secret!',
     resave: true,
     saveUninitialized: true,
     cookie: {maxAge: 3600000}
@@ -115,7 +115,7 @@ app.get('/pages/about_us', globalApiLimiter, (req,res)=>{
         res.render('pages/about_us', {category:data});
     })
 })
-app.get('/profile',ensureAuth, (req,res)=>{
+app.get('/profile',ensureAuth, NoAdmin, (req,res)=>{
     Category.find({}).then(data =>{
         res.render('users/profile', {category:data})
     })});
@@ -124,6 +124,7 @@ app.get('/profile',ensureAuth, (req,res)=>{
 // Use Routes
 app.use('/admin',ensureAuth,isAdmin,adminRouter);
 app.use('/pages', pages,globalApiLimiter);
+app.use('/cart', cart);
 app.use('/login', login,apiLimiter,alreadyAuth);
 app.use('/register', register,alreadyAuth, globalApiLimiter);
 app.use('/pages/contact_us', contact_us,globalApiLimiter);

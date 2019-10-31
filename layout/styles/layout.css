@@ -1166,8 +1166,7 @@ img{max-width:100%;}
 
 /* Web */
 .fullweb{
-
-	background-color:rgb(221, 221, 221)
+	background: linear-gradient(to bottom, rgb(221, 221, 221) 0%, white 25%);
 }
 
 .nomargin{
@@ -1267,6 +1266,19 @@ img{max-width:100%;}
 .btn.btn-primary {
 	font-size:0.9em;
 }
+.containerIndex{
+	font-size:35px;
+	
+	margin-top:3%;
+}
+.containerIndex i{
+	color:rgb(219, 106, 26);
+}
+.containerIndex .col:hover{
+	transform: scale(1.15,1.15);
+	color:#F012BE;
+}
+
 /*end Gallery Speicif Page */
 /* Cart start*/
 .cart{

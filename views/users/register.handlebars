@@ -15,54 +15,56 @@
 <link rel="stylesheet" href="/styles/loginstyles/style.css">
 <!-- Responsive  CSS -->
 <link rel="stylesheet" href="/styles/loginstyles/responsive.css">
-</head>
-<body>
 
-<div class="container py-2">
-    <div class="row">
-        <div class="col-md-12">
-			<div class="logo">
-				<a href="#">
-					<img src="images/logo.png" alt="" />
-				</a>
-			</div>
-            <div class="row">
-                <div class="col-md-6 login-form mx-auto">
-                    <!-- form card login -->
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="mb-0">הרשמה לאתר</h3>
-                        </div>
-                        <div class="card-body">
-							<h5 style="text-align: center">שם פרטי ומשפחה</h5>
-                            <form class="formLogin" action="/register" method="POST">
-                                <div class="form-group">
-									<input type="text" class="form-control" name="fname" value="{{fname}}" 
-                        				minlength="2" maxlength="10" placeholder="שם פרטי" required="true">
-									<div style="padding-top:2%">
-										<input type="text" class="form-control" name="lname" value="{{lname}}" 
-                        				minlength="2" maxlength="10"  placeholder="שם משפחה" required="true">	 
-									</div>
-									<div style="padding-top:2%"><h5 style="text-align: center">אימייל</h5></div>
+<div class="loginDiv" style="height:883px;">
+	<div class="container py-2 color">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="logo">
+					<a href="#">
+						<i class="fa fa-user-plus xl" aria-hidden="true" ></i>
+					</a>
+				</div>
+				<div class="row">
+					<div class="col-md-6 login-form mx-auto">
+						<!-- form card login -->
+						<div class="card">
+							<div class="card-header">
+								<h3 class="mb-0">הרשמה לאתר</h3>
+							</div>
+							<div class="card-body">
+								<h5 style="text-align: center">שם פרטי ומשפחה</h5>
+								<form class="formLogin" action="/register" method="POST">
+									<div class="form-group">
+										<input type="text" class="form-control" name="fname" value="{{fname}}"
+											minlength="2" maxlength="10" placeholder="שם פרטי" required="true">
+										<div style="padding-top:2%">
+											<input type="text" class="form-control" name="lname" value="{{lname}}"
+												minlength="2" maxlength="10" placeholder="שם משפחה" required="true">
+										</div>
+										<div style="padding-top:2%">
+											<h5 style="text-align: center">אימייל</h5>
+										</div>
 										<label class="control-label" for="email"></label>
-                                    	<input type="email" class="form-control" name="email" value="{{email}}"
-                        				pattern="^[a-zA-Z0-9]*[@][a-zA-Z]*[.][a-zA-Z]{3}"
-                        				placeholder="כתובת אימייל" required="true">
-										<small id="nameHelper" class="form-text text-muted" style="text-align: right">email@gmail.com</small>
+										<input type="email" class="form-control" name="email" value="{{email}}"
+											pattern="^[a-zA-Z0-9]*[@][a-zA-Z]*[.][a-zA-Z]{3}" placeholder="כתובת אימייל"
+											required="true">
+										<small id="nameHelper" class="form-text text-muted"
+											style="text-align: right">email@gmail.com</small>
 										<i class="mdi mdi-account" style="margin-right: -0.5%"></i>
-                                </div>
-								<h5 style="text-align: center">סיסמה</h5>
-                                <div class="form-group" >
-									<label class="control-label" for="password"></label>
-                                    <input name="password" type="password" 
-										class="form-control" placeholder="סיסמה" id="pwd" required="true">
-									<i class="mdi mdi-onepassword" id="passwordsymbol"></i>
-									<div style="padding-top:2%" > </div>
-									<label class="control-label" for="confirm_password"></label>
-									<input name="confirm_password" type="password" 
-										class="form-control" placeholder="אישור סיסמה" id="pwd" required="true">
-                                </div>
-							<!--<div class="row mb-3">
+									</div>
+									<h5 style="text-align: center">סיסמה</h5>
+									<div class="form-group">
+										<label class="control-label" for="password"></label>
+										<input name="password" type="password" class="form-control" placeholder="סיסמה"
+											id="pwd" required="true">
+										<i class="mdi mdi-onepassword" id="passwordsymbol"></i>
+										<div style="padding-top:2%"> </div>
+										<label class="control-label" for="confirm_password"></label>
+										<input name="confirm_password" type="password" class="form-control"
+											placeholder="אישור סיסמה" id="pwd" required="true">
+									</div>
+									<!--<div class="row mb-3">
 									<div class="col-md-6">
 										<div class="checkbox checkbox-primary text-right">
 											<input id="checkbox1" class="styled" style="margin-top:-5%" type="checkbox">
@@ -75,11 +77,13 @@
 										<a href="#">שכחת סיסמה?</a>
 									</div>
 								</div>-->
-								<div class="row mb-3">
-									<div class="col-lg-12 text-center"><button type="submit" class="btn btn-success rippler btn-wd rippler-default" style="font-size:large" id="btnLogin">אישור</button></div>
-								</div>
-                            </form>
-							<!--<div class="naw-text mb-3">
+									<div class="row mb-3">
+										<div class="col-lg-12 text-center"><button type="submit"
+												class="btn btn-success rippler btn-wd rippler-default"
+												style="font-size:large" id="btnLogin">אישור</button></div>
+									</div>
+								</form>
+								<!--<div class="naw-text mb-3">
 								<h5>חדש באתר?</h5>
 							</div>
 							<div class="row">
@@ -92,21 +96,20 @@
 							</div>
                         </div>
                         <!--/card-block-->
-						<div class="card-footer">
-							<div class="copy-text">Created with <i class="fa fa-heart"></i> by <a href="http://html.design/">html.design</a></div>
+								<div class="card-footer">
+									<div class="copy-text">Created with <i class="fa fa-heart"></i> by <a
+											href="http://html.design/">html.design</a></div>
+								</div>
+							</div>
+							<!-- /form card login -->
 						</div>
-                    </div>
-                    <!-- /form card login -->
-                </div>
-            </div>
-            <!--/row-->
-        </div>
-        <!--/col-->
-    </div>
-    <!--/row-->
+					</div>
+					<!--/row-->
+				</div>
+				<!--/col-->
+			</div>
+			<!--/row-->
+		</div>
+		<!--/container-->
+	</div>
 </div>
-<!--/container-->
-
-
-</body>
-</html>

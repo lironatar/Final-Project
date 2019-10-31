@@ -4,12 +4,15 @@
 /*------------------------------------------------------------------
     SKELETON
 -------------------------------------------------------------------*/
-
+.color{
+	background: chocolate;
+}
 body {
     color: #999999;
-    font-size: 14px;
+    font-size: 55px;
     font-family: 'Poppins', sans-serif;
     line-height: 1.80857;
+	background-color: chocolate;
 }
 
 body.demos .section-title img {

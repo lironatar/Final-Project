@@ -7,22 +7,47 @@ require("../Models/Category");
 const Category = mongoose.model('category');
 require("../Models/Products");
 const Products = mongoose.model('products')
+require("../Models/CategoryImages");
+const CategoryImages = mongoose.model('CategoryImages');
 //const {globalApiLimiter} = require('../helper/limiter');
 //var S = require('string');
 
-router.get('/gallery', (req,res)=>{
-    Category.find({}).then(data =>{
-        res.render('pages/gallery', {category:data} );
-    })
+// Global Object 
+MyObject = {
+    //async - await function for footer categories
+    footer : async function forall () {
+        var footer = await Category.find({});
+        return footer;
+    }
+}
+
+router.get('/gallery',async (req,res)=>{
+   //let footer = await forall();
+   let footer = await MyObject.footer();
+   res.render('pages/gallery', {category : footer}) 
 });
 
 
-
-router.get('/gallery/:title', (req,res)=>{
-    Products.findOne({title:req.params.title}).then( product =>{
-        res.render('pages/products', {product:product});
-    })
+router.get('/gallery/:title', async(req,res)=>{
+    let footer = await MyObject.footer();
+    try{
+        let Images = await CategoryImages.find({title:req.params.title});
+        let title = Images[0].title;
+        res.render('pages/categoryimages',{Images : Images, title:title, category : footer});
+    }catch(err){
+        let statusCode = '404'
+        let errorText = 'מצטערים, כרגע אין מוצר'
+        res.render('errors/errors',{statusCode:statusCode, errorText: errorText, category: footer})
+    }
+    
 })
+router.get('/products/:imageTitle', async (req,res)=>{
+    
+    let product = await Products.findOne({imageTitle: req.params.imageTitle});
+    let footer = await MyObject.footer();
+    res.render('pages/products', {product:product, category: footer });
+})
+
 
 
 module.exports = router;

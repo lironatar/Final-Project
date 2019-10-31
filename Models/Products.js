@@ -7,11 +7,16 @@ const ProductsSchema = new Schema({
 
     title: String,
     text: String,
-    size: Array,
+    imageTitle: String,
+    size: [{
+        type:String
+    }],
     cover: String,
     quantity: Array,
     price: Array,
-    examplepics: String
+    examplepics: [{
+        type:String
+    }]
 
 })
 

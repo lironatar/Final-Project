@@ -1,36 +1,19 @@
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- Top Background Image Wrapper -->
 
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
 <div class="wrapper overlay">
   <div id="breadcrumb" class="hoc clear">
-    <!-- ################################################################################################ -->
-    
-    <!-- ################################################################################################ -->
   </div>
 </div>
-<!-- ################################################################################################ -->
-
-<!-- End Top Background Image Wrapper -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-
-<div class="flex-container" style="overflow:hidden; background-color:#fffff7	; position:relative; text-align: center; align-content:center">
-  <h1>המוצרים שלנו</h1>
-  <h4>כאן תוכלו להזמין את המוצרים שלנו בדרך מהירה נוחה וקלה</h4>
-  <div class="images" style="overflow: hidden;">
+<div class="flex-container">
+  <h4 style="text-align: center;">כאן תוכלו להזמין את המוצרים שלנו בדרך מהירה נוחה וקלה</h4>
+  <div class="images flex" style="overflow: hidden; text-align:center;">
     {{#each category}}
-      <div class ="phoneImg" style="background-color:white; overflow:hidden; ">
+      <div class ="phoneImg" style="background-color:white; overflow:hidden;">
         <h4>{{title}}</h4>
-        <div class="ImagesInside"><a href="/pages/gallery/{{title}}"><img src="{{pic}}"></a></div>
-        <p style="min-height: 60px; max-height:60px;">{{text}}</p>
+        <div class="ImagesInside"><a href="/pages/gallery/{{title}}#here"><img src="{{pic}}"></a></div>
+        <hr style="margin:0 auto; width:90%;">
+        <p style="height: 68px; margin-top:2%; font-size:1.1em">{{text}}</p>
         <hr>
-        <a class="btn btn-primary" href="/pages/gallery/{{title}}" role="button">המשך >></a>
+        <a class="btn btn-primary" style="font-size:1.15em; padding:8px 16px 8px 16px;" href="/pages/gallery/{{title}}#here" role="button">המשך >></a>
       </div>
     {{/each}}
     

@@ -605,7 +605,8 @@ animation-delay: 1s;
 
 /* ##################################################*/
 /*-- Reset Code --*/
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+html{box-sizing: border-box;}
+body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
 article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
 ol,ul{list-style:none;}
 blockquote,q{quotes:none;}
@@ -1181,16 +1182,7 @@ img{max-width:100%;}
 }
 
 /* Gallery Images*/
-.images {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    flex-direction: row;
-    width:100%;
-	max-height:100%;
-	padding-right:10%;
-	overflow:hidden;
-  }
+
 
 .images img {
     margin: 10px;
@@ -1204,13 +1196,13 @@ img{max-width:100%;}
 
 .phoneImg{
 	margin:15px;
-	min-height:400px;
-	max-height:400px;
+	height: 390px;
 	min-width:300px;
 	max-width:300px;
 	border:1px solid #D5CFCA;
 	overflow: hidden;	
 }
+
 .phoneImg hr{
 	width:90%;
 	
@@ -1220,7 +1212,7 @@ img{max-width:100%;}
 }
 
 
-@media screen and (max-width:500px)
+@media screen and (max-width:400px)
 {
 	.phoneImg{
 		margin:2px;
@@ -1237,23 +1229,7 @@ img{max-width:100%;}
 		
 	}
 }
-@media screen and (max-width:460px)
-{
-	.phoneImg{
-		margin:2px;
-		
-	}
-	.images{
-		padding-right:1rem;
-	}
-	.images img{
-		min-width: 40vw;
-		max-width: 40vw;
-		min-height: 250px;
-		max-height: 250px;
-		
-	}
-}
+
 
 
   /* change pass Page */
@@ -1280,6 +1256,18 @@ img{max-width:100%;}
 }
 /*end profile page */
 
+
+/*Gallery specific Page*/
+.flex{
+	display:flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.btn.btn-primary {
+	font-size:0.9em;
+}
+/*end Gallery Speicif Page */
 /* Cart start*/
 .cart{
 	

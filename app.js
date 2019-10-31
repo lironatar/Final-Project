@@ -76,7 +76,6 @@ app.use(express.static(path.join(__dirname, 'layout')));
 //Method Override middleware
 app.use(methodOverride('_method'));
 
-
 // Express Session
 app.use(session({
     secret: 'Huge secret!',
@@ -90,6 +89,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use(flash());
+
 
 
 

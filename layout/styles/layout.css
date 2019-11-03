@@ -27,7 +27,7 @@ File: Layout CSS
 
 /* Top Bar
 --------------------------------------------------------------------------------------------------------------- */
-#topbar{padding:15px 0; font-size:0.9rem; text-align:center; font-weight: bold;}
+#topbar{padding:15px 0px 15px 20px; font-size:1rem; text-align:center; font-weight: bold;}
 
 #topbar *{margin:0; padding:0; list-style:none;}
 #topbar ul li{display:inline-block; margin-right:10px; padding-right:15px; border-right:1px solid;}
@@ -755,19 +755,10 @@ img{max-width:100%;}
 
 /*-- Index-Page-Styling --*/
 #dfuslogo{
-	margin-bottom:-1%;
-	margin-top:-1%;
-	position: relative;
-	margin-left: 36%;
+	
 	height: 30vh;
 }
-@media screen and (max-width: 450px){
-	#dfuslogo{
-		height:25vh;
-		
-	}
 
-}
 
 /*--- Responsinator Code ---*/
 
@@ -1168,7 +1159,9 @@ img{max-width:100%;}
 .fullweb{
 	background: linear-gradient(to bottom, rgb(221, 221, 221) 0%, white 25%);
 }
-
+.row2Gradient{
+	background: linear-gradient(to bottom, rgb(243, 233, 197) 22%, rgb(245, 239, 220) 100%)
+}
 .nomargin{
 	max-width:97%;
 	background-color:rgb(86, 86, 221);
@@ -1195,7 +1188,7 @@ img{max-width:100%;}
 
 .phoneImg{
 	margin:15px;
-	height: 390px;
+	height: 420px;
 	min-width:300px;
 	max-width:300px;
 	border:1px solid #D5CFCA;
@@ -1209,26 +1202,112 @@ img{max-width:100%;}
 .ImagesInside:hover{
 	transform: scale(1.15,1.15);
 }
+.containerIndex{
+	font-size:35px;
+	
+	margin-top:3%;
+}
+.containerIndex i{
+	color:rgb(219, 106, 26);
+}
+.containerIndex .col:hover{
+	transform: scale(1.15,1.15);
+	color:#F012BE;
+}
+.product button:hover{
+	background-color:rgb(56, 252, 121);
+	color:rgb(231, 20, 126);
+}
+.color-carousel{
+	height:20%; 
+	margin-top:27%;
+	border:1.5px solid black;
+}
 
+.color-carousel:hover{
+	background-color:gray;
+}
+.product .form-control{
+	width:25%;
+	font-size:inherit;
+}
+.product .two{
+	width:100%; 
+	height:330px;
+}
+.product .card{
+	text-align: right; 
+	font-size:20px;
+}
+.color-carousel{ 
+	margin-top:27%;
+	border:1.5px solid black;
+}
 
-@media screen and (max-width:400px)
+@media screen and (min-width:300px ) and (max-width:480px)
 {
+	.row4{
+		font-size:16px;
+	}
+	#topbar{
+		margin:0 0 0 0;
+		font-size:15px;
+		
+	}
+	#topbar a{
+		
+	}
+	#dfuslogo{
+		width:200px;
+		height:200px;
+	}
+	.containerIndex {
+		font-size: 22px;
+	}
+	.containerIndex p{
+		max-height: 100px;
+		height:250px;
+	}
+	.containerIndex i{
+		height:50px;
+	}
 	.phoneImg{
-		margin:2px;
+		margin:10px;
+		height:500px;
 		
 	}
 	.images{
 		padding-right:1rem;
 	}
 	.images img{
-		min-width: 40vw;
-		max-width: 40vw;
+		min-width: 66vw;
+		max-width: 66vw;
 		min-height: 250px;
 		max-height: 250px;
+	}
+	.container .product{
+		height:2000px;
+	}
+	.product .form-control{
+		width:50%;
+	}
+	.product{
+		height:160vh;
+	}
+	.color-carousel{ 
+	margin-top:27%;
+	border:1.5px solid black;
+	}
+	.cardMobile{
 		
 	}
 }
-
+@media screen and (min-width:480px ) and (max-width:680px)
+{
+	.product{
+		height:200vh;
+	}
+}
 
 
   /* change pass Page */
@@ -1266,18 +1345,8 @@ img{max-width:100%;}
 .btn.btn-primary {
 	font-size:0.9em;
 }
-.containerIndex{
-	font-size:35px;
-	
-	margin-top:3%;
-}
-.containerIndex i{
-	color:rgb(219, 106, 26);
-}
-.containerIndex .col:hover{
-	transform: scale(1.15,1.15);
-	color:#F012BE;
-}
+
+
 
 /*end Gallery Speicif Page */
 /* Cart start*/

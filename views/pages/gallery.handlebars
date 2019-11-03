@@ -3,15 +3,15 @@
   <div id="breadcrumb" class="hoc clear">
   </div>
 </div> -->
-<div class="flex-container">
-  <h2 style="text-align: center;">כאן תוכלו להזמין מוצרים </h4>><br>
+<div class="flex-container" style="font-size:18px; font-family:alef-regular,sans-serif; font-weight:400">
+  <h2 style="text-align: center; font-size: 35px;">כאן תוכלו להזמין מוצרים </h4><br>
   <div class="images flex" style="overflow: hidden; text-align:center;">
     {{#each category}}
-      <div class ="phoneImg" style="background-color:white; overflow:hidden;">
-        <h4>{{title}}</h4>
+      <div class ="phoneImg" style="background-color:white; overflow:hidden; font-size:18px; font-family:alef-regular,sans-serif; font-weight:400">
+        <h4 style="font-size:22px; font-weight:500">{{title}}</h4>
         <div class="ImagesInside"><a href="/pages/gallery/{{title}}#here"><img src="{{pic}}"></a></div>
         <hr style="margin:0 auto; width:90%;">
-        <p style="height: 68px; margin-top:2%; font-size:1.1em">{{text}}</p>
+        <p style="height: 83px; margin-top:2%; overflow:hidden;font-size:1.1em">{{text}}</p>
         <hr>
         <a class="btn btn-primary ImagesInside" style="font-size:1.25em; padding:8px 16px 9px 16px;" href="/pages/gallery/{{title}}#here" role="button">המשך >></a>
       </div>

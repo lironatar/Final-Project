@@ -42,10 +42,26 @@ router.get('/gallery/:title', async(req,res)=>{
     
 })
 router.get('/products/:imageTitle', async (req,res)=>{
-    
+    let imageTitle = "פולדרים מגניבים"
+
     let product = await Products.findOne({imageTitle: req.params.imageTitle});
     let footer = await MyObject.footer();
-    res.render('pages/products', {product:product, category: footer });
+    res.render('pages/products', {product:product, category: footer,
+    helpers: {
+        foo : function() {
+            let index = product.examplepics;
+            let i=0;
+            let indexArray =[]
+            index.forEach(element => {
+                i++;
+                indexArray.push(i);
+            });
+            i--;
+            
+            return indexArray;
+        }
+    }
+    });
 })
 
 

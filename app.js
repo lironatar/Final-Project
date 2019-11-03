@@ -54,7 +54,6 @@ const hbs = exphbs.create({
     // Custom Helpers
     helpers:{
         calculation: function(value){
-            
             return value
         }
     }

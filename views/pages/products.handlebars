@@ -13,9 +13,9 @@
                             <li data-target="#carouselExampleIndicators" style="background-color:black" data-slide-to="{{this}}"></li>
                         {{/each}}
                     </ol>
-                    <div class="carousel-inner" style="height:">
+                    <div class="carousel-inner">
                         <div class="carousel-item active">
-                        <img src="{{product.cover}}" class="d-block w-100" alt="...">
+                            <img src="{{product.cover}}" class="d-block w-100" alt="...">
                         </div>
                         {{#each product.examplepics}}
                         <div class="carousel-item">
@@ -35,42 +35,50 @@
         </div>
         <div class="col-md-5 card cardMobile" style="">
             <div><h4>בחר אפשריות</h4></div>
-            <form action="/cart" method="POST">
-                <div class="form-group" style="">
-                    <label for="Size">גודל</label>
-                    <select class="form-control" id="Size">
-                        {{#each product.size}}
-                        <option>{{this}}</option>
-                        {{/each}}
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="Quantity">כמות</label>
-                    <select class="form-control" id="Quantity">
-                        {{#each product.quantity}}
-                        <option>{{this}}</option>
-                        {{/each}}
-                    </select>
-                </div>
-                {{#if product.sides}}
-                <div class="form-group">
-                    <label for="Quantity">בחר אפשרות</label>
-                    <select class="form-control" id="Sides">
-                        {{#each product.sides}}
-                        <option>{{this}}</option>
-                        {{/each}}
-                    </select>
-                </div>
-                {{/if}}
-                <div class="col" style="margin: 10% 0 2% 0;" >
-                <button type="submit" class="btn btn-primary" >קנה עכשיו <i class="fa fa-cart-plus fa-flip-horizontal" aria-hidden="true"></i></button>
-                </div>
-            </form>
-            
-            
+            <div class="col">
+                <form action="/cart" method="POST">
+                    <div class="form-group" style="">
+                        <label for="Size">גודל</label>
+                        <select class="form-control" id="Size">
+                            {{#each product.size}}
+                            <option>{{this}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="Quantity">כמות</label>
+                        <select class="form-control" id="Quantity">
+                            {{#each product.quantity}}
+                            <option>{{this}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+                    {{#if product.sides}}
+                    <div class="form-group">
+                        <label for="Sides">בחר אפשרות</label>
+                        <select class="form-control" id="Sides">
+                            {{#each product.sides}}
+                            <option>{{this}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+                    {{/if}}
+                    <div class="row" style="margin: 10% 0 2% 0; color:rgb(11, 181, 248)">
+                        <div class="col" style="font-size:35px;">
+                            <p id="price">{{product.price.[0]}} &#8362 </p>
+                            <p></p>
+                        </div>
+                        <div class="col">
+                            <button href="/cart" type="submit" class="btn btn-primary">קנה עכשיו <i
+                                class="fa fa-cart-plus fa-flip-horizontal" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+            </div>
+                </form>
         </div>
     </div>
     <br>
+    
     
 </div>
 {{else}}
@@ -79,7 +87,7 @@
 </div>
 {{/if}}
 <script>
-    
+    document.getElementById("price").value = 
 </script>
  <!--<div style="width:inherit">
                 <img src="{{product.cover}}" alt="">

@@ -12,10 +12,9 @@ const User = mongoose.model('user');
 require("../Models/Category");
 const Category = mongoose.model('category');
 
-router.get('',alreadyAuth, (req,res)=>{
-    Category.find({}).then(data =>{
+router.get('',alreadyAuth,async (req,res)=>{
+        var data = await Category.find({});
         res.render('users/login', {category:data})
-    }) 
 });
 
 

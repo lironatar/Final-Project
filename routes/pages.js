@@ -20,7 +20,6 @@ MyObject = {
         return footer;
     }
 }
-
 router.get('/gallery',async (req,res)=>{
    //let footer = await forall();
    let footer = await MyObject.footer();
@@ -48,7 +47,7 @@ router.get('/products/:imageTitle', async (req,res)=>{
     let footer = await MyObject.footer();
     res.render('pages/products', {product:product, category: footer,
     helpers: {
-        foo : function() {
+        carousel : function() {
             let index = product.examplepics;
             let i=0;
             let indexArray =[]
@@ -57,8 +56,7 @@ router.get('/products/:imageTitle', async (req,res)=>{
                 indexArray.push(i);
             });
             i--;
-            
-            return indexArray;
+            return indexArray; 
         }
     }
     });

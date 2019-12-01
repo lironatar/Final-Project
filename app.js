@@ -9,6 +9,7 @@ const flash = require('connect-flash');
 const session = require('express-session');
 const passport = require('passport');
 const rateLimit = require("express-rate-limit");
+const MongoStore = require('connect-mongo')(session);
 //Load Routes
 const login = require('./routes/login');
 const register = require('./routes/register');
@@ -21,10 +22,8 @@ const {NoAdmin} = require('./helper/NoAdmin');
 //Limiters
 const {apiLimiter} = require('./helper/limiter');
 const {globalApiLimiter} = require('./helper/limiter');
-//Profile Routes
-const changeName= require('./routes/changeName');
-const changePass= require('./routes/changePass');
-const changeMail = require('./routes/changeMail');
+//Profile Route
+const profile = require('./routes/profileManagment');
 //Products Routes
 const pages = require('./routes/pages');
 const cart = require('./routes/cart');
@@ -80,7 +79,8 @@ app.use(session({
     secret: 'Huge secret!',
     resave: true,
     saveUninitialized: true,
-    cookie: {maxAge: 3600000}
+    store: new MongoStore({mongooseConnection: mongoose.connection}),//MongoStore saves session
+    cookie: {maxAge: 60 * 60 * 1000},
 }));
 
 //Passport and session configuration
@@ -97,6 +97,7 @@ app.use(function(req,res,next){
     res.locals.success = req.flash('success');
     res.locals.error = req.flash('error');
     res.locals.errors= req.flash('errors');
+    res.locals.session = req.session;
     res.locals.user = req.user || null; 
     next();
 });
@@ -127,10 +128,8 @@ app.use('/cart', cart);
 app.use('/login', login,apiLimiter,alreadyAuth);
 app.use('/register', register,alreadyAuth, globalApiLimiter);
 app.use('/pages/contact_us', contact_us,globalApiLimiter);
-app.use('/profile/changeName', changeName, ensureAuth);
-app.use('/profile/changePass', changePass,ensureAuth);
-app.use('/profile/changeMail',  changeMail,ensureAuth);
-app.use('/pages/gallery', globalApiLimiter);
+app.use('/profile', profile, ensureAuth, globalApiLimiter);
+
 
 //Logout Route
 app.get('/logout', (req,res)=>{

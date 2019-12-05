@@ -20,7 +20,7 @@ Technologies included:
 - Handlebars
 
 External APIs:
-- YPAY for secure credit card purchases.
+- YPAY for secure credit-card purchases.
 
 ### Installation
 
@@ -34,4 +34,4 @@ connect-mongo crypto-js express express-handlebars express-rate-limit express-se
 method-override mongo-sanitize mongoose nodemailer nodemon passport passport-local
 rate-limit-mongo
 ```
-Files dose'nt include images.
+Files does'nt include images.

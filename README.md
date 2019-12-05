@@ -1,7 +1,8 @@
 
 ## Node.js-Final-Project
-An E-Commerce website for printing-press business\
-available at https://dfusreuven.herokuapp.com/home
+An E-Commerce website for printing-press business,
+available at https://dfusreuven.herokuapp.com/home\
+
 
 ## Introduction 
 Project *WebMarketing* is a website made for "Dfus Reuven" business.\

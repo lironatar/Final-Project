@@ -23,7 +23,7 @@ Technologies included:
 External APIs:
 - YPAY for making purchases
 
-###### Installation
+### Installation
 1. Download the files.
 2. Open terminal in the downloaded folder
 3. Install package manager with the command npm init

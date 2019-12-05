@@ -10,7 +10,7 @@ The project is currently in developing progress, Estimated completion date is 12
 ### Technologies
 Written in Node.js, Express as framework.\
 Model: Client-Server.\
-Technologies included:\
+Technologies included:
 - Html 5
 - Css 3
 - JS ES6
@@ -23,7 +23,7 @@ External APIs:
 - YPAY for making purchases
 
 ### Installation
-1. Download files.\
+1. Download files.
 2. Open terminal in the downloaded folder.
 3. Install package manager with the command npm init.
 4. Copy and paste the following command:\

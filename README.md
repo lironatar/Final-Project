@@ -23,11 +23,15 @@ External APIs:
 - YPAY for secure credit card purchases.
 
 ### Installation
+
 1. Download files.
 2. Open terminal in the downloaded folder.
 3. Install package manager with the command npm init.
 4. Copy and paste the following command:\
+```
    Npm install admin-bro admin-bro-expressjs admin-bro-mongoose body-parser bootstrap connect-flash
    connect-mongo crypto-js express express-handlebars express-rate-limit express-session
    method-override mongo-sanitize mongoose nodemailer nodemon passport passport-local
    rate-limit-mongo
+```
+Files dose'nt include images.

@@ -1,13 +1,13 @@
 
-### Node.js-Final-Project
+## Node.js-Final-Project
 An E-Commerce website for printing-press business\
 https://dfusreuven.herokuapp.com/home
 ##
-### Introduction 
+## Introduction 
 Project *WebMarketing* is a website made for "Dfus Reuven" business.\
 This is my final project for software practical engineer and cyber professional degree at ariel university.\
 The project is currently in developing progress, Estimated completion date is 12/20/2019.\
-### Technologies
+## Technologies
 Written in Node.js, Express as framework.\
 Model: Client-Server.\
 Technologies included:
@@ -22,7 +22,7 @@ Technologies included:
 External APIs:
 - YPAY for secure credit-card purchases.
 
-### Installation
+## Installation
 
 1. Download files.
 2. Open terminal in the downloaded folder.

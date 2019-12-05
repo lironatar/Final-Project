@@ -28,6 +28,7 @@ External APIs:
 ### Pros:
 - Implementation of external API.
 - Intended for serious purpose. 
+- Responsive.
 - 
 
 ### Cons:

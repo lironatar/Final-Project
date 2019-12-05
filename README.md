@@ -5,7 +5,7 @@ https://dfusreuven.herokuapp.com/home
 =======
 # Introduction 
 Project *WebMarketing* is a website made for "Dfus Reuven" business.
-This is my final project for practical engineering at ariel university.
+This is my final project for software practical engineer and cyber professional degree at ariel university.
 The project is currently in developing progress, Estimated completion date is 12/20/2019.
 
 ### Technologies

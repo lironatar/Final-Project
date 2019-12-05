@@ -20,7 +20,7 @@ Technologies included:
 - Handlebars
 
 External APIs:
-- YPAY for making purchases
+- YPAY for secure credit card purchases.
 
 ### Installation
 1. Download files.

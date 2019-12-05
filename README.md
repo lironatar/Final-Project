@@ -30,5 +30,5 @@ External APIs:
 4. Copy and paste the following command:
    Npm install admin-bro admin-bro-expressjs admin-bro-mongoose body-parser bootstrap connect-flash
    connect-mongo crypto-js express express-handlebars express-rate-limit express-session
-   method-override mong-sanitize mongoose nodemailer nodemon passport passport-local
+   method-override mongo-sanitize mongoose nodemailer nodemon passport passport-local
    rate-limit-mongo

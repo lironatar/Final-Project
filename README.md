@@ -24,6 +24,17 @@ Technologies included:
 External APIs:
 - YPAY for secure credit-card purchases.
 
+## Project Pros and Cons
+### Pros:
+- Implementation of external API.
+- Intended for serious purpose. 
+- 
+
+### Cons:
+- Some of the Css codes are a bit messy and repetitive.
+- Need to work on my Javascript ES6 implementation.
+-
+
 ## Installation
 
 1. Download files.

@@ -1,7 +1,7 @@
 
 ## Node.js-Final-Project
 An E-Commerce website for printing-press business,
-available at https://dfusreuven.herokuapp.com/home\
+available at https://dfusreuven.herokuapp.com/home
 
 
 ## Introduction 

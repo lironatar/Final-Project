@@ -2,7 +2,7 @@
 ### Node.js-Final-Project
 E-Commerce website for printing-press business
 https://dfusreuven.herokuapp.com/home
-
+===
 ### Introduction 
 Project *WebMarketing* is a website made for "Dfus Reuven" business.\
 This is my final project for software practical engineer and cyber professional degree at ariel university.\
@@ -34,4 +34,4 @@ connect-mongo crypto-js express express-handlebars express-rate-limit express-se
 method-override mongo-sanitize mongoose nodemailer nodemon passport passport-local
 rate-limit-mongo
 ```
-Files does'nt include images.
+

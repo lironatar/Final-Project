@@ -28,6 +28,7 @@ External APIs:
 ### Pros:
 - Implementation of external API. 
 - Responsive.
+- Included login and register routes, With custom validations.
 - 
 
 ### Cons:

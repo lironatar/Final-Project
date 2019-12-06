@@ -26,8 +26,7 @@ External APIs:
 
 ## Project Pros and Cons
 ### Pros:
-- Implementation of external API.
-- Intended for serious purpose. 
+- Implementation of external API. 
 - Responsive.
 - 
 

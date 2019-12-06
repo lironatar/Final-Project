@@ -303,8 +303,7 @@ input:focus, textarea:focus, *:required:focus{border-color:#EA5616;}
 .latest article .txtwrap{color:inherit; background-color:#F5F5F5;}
 
 
-/* Split Box */
-.split section, .split section::after{color:#474747; background-color:rgba(255,255,255,.8);}
+
 
 
 /* Footer */

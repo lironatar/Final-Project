@@ -1176,7 +1176,20 @@ img{max-width:100%;}
 	background-repeat: no-repeat;
 	background-position: center;
 }
+ul .facebook{
+	width:35%;
+	font-weight: 700;
+	color:blue;
+}
+ul .fa-facebook{
+	color:blue;
+}
 @media screen and (min-width:300px ) and (max-width:480px){
+	ul .facebook{		
+		margin-right:20px;
+		margin-bottom: 20px;
+		width:70%;
+	}
 	#dfusLogo2{
 		margin-top:-20%;
 	}
@@ -1398,4 +1411,8 @@ img{max-width:100%;}
 	z-index: 0;
 	margin-top: -20px;
 	position: absolute;
+}
+#footer{
+	font-size:20px;
+	font-weight: 600;
 }

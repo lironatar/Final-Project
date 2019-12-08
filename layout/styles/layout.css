@@ -11,17 +11,14 @@
 .row1, .row1 a{}
 .row2{} .row2 a{}
 .row3, .row3 a{}
-.row4{
-	margin-top: 5%;
-	
-}, .row4 a{}
+.row4{margin-top: 5%;} .row4 a{}
 .row5, .row5 a{}
 
 
 /* Top Bar
 --------------------------------------------------------------------------------------------------------------- */
-#topbar{padding:15px 0px 15px 20px; font-size:1.15rem; text-align:center; font-weight: bold;}
-
+#topbar{padding:15px 0px 15px 20px;text-align:center; font-weight: bold;}
+#topbar{font-size:1.5rem;}
 #topbar *{margin:0; padding:0; list-style:none;}
 #topbar ul li{display:inline-block; margin-right:10px; padding-right:15px; border-right:1px solid;}
 #topbar ul li:last-child{margin-right:0; padding-right:0; border-right:none;}
@@ -32,7 +29,6 @@
 /* Header
 --------------------------------------------------------------------------------------------------------------- */
 #header{padding:3% 0;}
-
 #header #logo *{margin:0; line-height:1;}
 #header #logo h1{margin-top:8px; font-size:26px; letter-spacing:3px;}
 
@@ -43,11 +39,12 @@
 #header #quickinfo br{display:none;}
 
 
+
 /* Page Intro
 --------------------------------------------------------------------------------------------------------------- */
 #pageintro{padding:200px 0; text-align:center; text-align: center;}
 #pageintro *{word-wrap:break-word;}
-#pageintro .heading{margin-bottom:20px; font-size:5rem; font-weight:400;}
+#pageintro .heading{margin-bottom:20px; font-size:5rem; font-weight:600; text-align: center;color:white;}
 #pageintro p{font-size:1.2rem;}
 #pageintro footer{margin-top:50px;}
 
@@ -93,6 +90,7 @@
 	margin-left:auto;
 	margin-right:auto;
 	background-color:white;
+	
 }
 /* end my addons */
 .latest{}
@@ -412,7 +410,7 @@ table a, #comments a{background-color:inherit;}
 	#header{text-align:center;}
 	#header #logo{margin:0 0 30px 0;}
 
-	#pageintro .heading{font-size:2rem;}
+	#pageintro .heading{font-size:2rem; }
 
 	.sectiontitle{max-width:none; text-align:left;}
 
@@ -449,7 +447,7 @@ background: -webkit-linear-gradient(#f01616, rgb(29, 238, 1));
 }
 .special{
 position: absolute;
-top: 100%;
+top: 50%;
 left: 50%;
 transform: translate(-50%,-50%);
 color:#1670f0;
@@ -1178,9 +1176,13 @@ img{max-width:100%;}
 	background-repeat: no-repeat;
 	background-position: center;
 }
-@media screen and (min-width:300px ) and (max-width:480px)
-{
-	.backgroundMain{}
+@media screen and (min-width:300px ) and (max-width:480px){
+	#dfusLogo2{
+		margin-top:-20%;
+	}
+	.backgroundMain .special{
+		margin-top:10vh;
+	}
 	.special{
 		margin-top: 200px;
 	}
@@ -1382,6 +1384,18 @@ img{max-width:100%;}
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	height:600px;
-	
+	height:70vh;
+	position: relative;
+}
+.backgroundMain .after {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 105%;
+    display: block;
+    color: black;
+	background: rgba(0, 0, 0, .55);
+	z-index: 0;
+	margin-top: -20px;
+	position: absolute;
 }

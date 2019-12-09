@@ -104,7 +104,7 @@ app.use(function(req,res,next){
 
 
 //Get Routes
-app.get('/home',globalApiLimiter, (req,res)=>{
+app.get('',globalApiLimiter, (req,res)=>{
     Category.find({}).then(data =>{
         res.render('index', {category:data});
     })
@@ -115,10 +115,7 @@ app.get('/pages/about_us', globalApiLimiter, (req,res)=>{
         res.render('pages/about_us', {category:data});
     })
 })
-app.get('/profile',ensureAuth, NoAdmin, (req,res)=>{
-    Category.find({}).then(data =>{
-        res.render('users/profile', {category:data})
-    })});
+
 
 
 // Use Routes

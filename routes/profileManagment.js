@@ -7,21 +7,27 @@ const {ensureAuth} = require('../helper/authtrue');
 
 require('../Models/User');
 const Users = mongoose.model('user');
+const Footer = require('../helper/footer');
+
 // Profile
-router.get('', ensureAuth, (req, res)=>{
-    res.render('users/profile')
+router.get('', ensureAuth,async (req, res)=>{
+    footerProducts = await Footer.Footer();
+    res.render('users/profile', {category: footerProducts})
 })
 // Change Mail
-router.get('/changeMail', ensureAuth,(req,res)=>{
-    res.render('users/changeMail');
+router.get('/changeMail',ensureAuth, async(req,res)=>{
+    footerProducts = await Footer.Footer();
+    res.render('users/changeMail', {category: footerProducts});
 })
 // Change Name
-router.get('/changeName', ensureAuth, (req,res)=>{
-    res.render('users/changeName');
+router.get('/changeName', ensureAuth, async(req,res)=>{
+    footerProducts = await Footer.Footer();
+    res.render('users/changeName', {category: footerProducts});
 });
 // Change Pass
-router.get('/changePass', ensureAuth,(req,res)=>{
-    res.render('users/changePass');
+router.get('/changePass', ensureAuth, async(req,res)=>{
+    footerProducts = await Footer.Footer();
+    res.render('users/changePass', {category: footerProducts});
 })
 
 // Email Managment

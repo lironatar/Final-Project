@@ -36,15 +36,5 @@ External APIs:
 - Need to work on my Javascript ES6 implementation.
 -
 
-## Installation
 
-1. Download files.
-2. Open terminal in the downloaded folder.
-3. Install package manager with command npm init.
-4. Copy and paste all of the Npms with following command:
-```
-$ Npm install admin-bro admin-bro-expressjs admin-bro-mongoose body-parser bootstrap connect-flash
-connect-mongo crypto-js express express-handlebars express-rate-limit express-session
-method-override mongo-sanitize mongoose nodemailer nodemon passport passport-local
-rate-limit-mongo
-```
+

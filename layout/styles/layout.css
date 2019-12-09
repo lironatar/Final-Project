@@ -1184,6 +1184,133 @@ ul .facebook{
 ul .fa-facebook{
 	color:blue;
 }
+
+@media screen and (min-width:480px ) and (max-width:680px)
+{
+
+	.product{
+		height:200vh;
+	}
+}
+
+
+  /* change pass Page */
+.accountPage{
+	text-align: right;
+	text-transform: capitalize;
+	padding-right:25%;
+	padding-left:30%;
+	font-weight: 500;
+	font-size: 1.1em;
+	min-width: 50%;
+	min-height: 40vh;
+}
+.accountPage .w-100{
+	display: none;
+}
+.userSection{
+	border: 1px solid black;
+	padding-top:1%;
+	
+}
+.userActionSection{
+	border: 1px solid black;
+	
+}
+/*end profile page */
+
+
+/*Gallery specific Page*/
+.flex{
+	display:flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.btn.btn-primary {
+	font-size:0.9em;
+}
+
+
+
+/*end Gallery Speicif Page */
+/* Cart start*/
+
+.cart{
+	box-sizing: border-box;
+	margin:0;
+	min-height: 50vh;
+	display:grid;
+	grid-template-columns:250px auto minmax(450px,500px);
+	grid-template-areas:
+		"products products order"
+		"bottomCart bottomCart bottomCart"
+	;
+}
+.productsCart,.orderCart,.bottomCart{margin: 1px;}
+.productsCart{
+	background:rgb(201, 38, 38);
+	grid-area: products;
+}
+.orderCart{
+	background:blueviolet;
+	grid-area: order;
+}
+.bottomCart{
+	background:seagreen;
+	grid-area: bottomCart;
+}
+.Cart{
+	min-width: 100px;
+	max-width: 250px;
+}
+.gridLogoCart{
+	margin:0;
+	min-height:15vh;
+	max-width: 15vh;
+	display:grid;
+	grid-template-columns:300px 900px;
+	grid-template-areas: 
+		"Cart Logo"
+	;
+}
+.gridLogo{
+	grid-area: Logo;
+}
+.gridCart{
+	grid-area: Cart;
+}
+@media screen and (min-width:300px ) and (max-width:480px){
+	.gridLogoCart{
+		grid-template-columns: 100px 200px;
+	}
+}
+/* Cart end*/
+.backgroundMain{
+	background-image:url('../images/demo/backgrounds/233.jpg');
+	max-width:100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height:70vh;
+	position: relative;
+}
+.backgroundMain .after {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: black;
+	background: rgba(0, 0, 0, .55);
+	z-index: 0;
+	position: absolute;
+}
+#footer{
+	font-size:20px;
+	font-weight: 600;
+}
+
 @media screen and (min-width:300px ) and (max-width:480px){
 	ul .facebook{		
 		margin-right:20px;
@@ -1295,128 +1422,14 @@ ul .fa-facebook{
 	.cardMobile{
 		
 	}
-}
-@media screen and (min-width:480px ) and (max-width:680px)
-{
-
-	.product{
-		height:200vh;
+	.accountPage{
+		height:100vh;
+		width: 100vw;
+		padding-right:5%;
+		padding-left:0;
+		margin:0 auto;
 	}
-}
-
-
-  /* change pass Page */
-.accountPage{
-	text-align: right;
-	text-transform: capitalize;
-	padding-right:25%;
-	padding-left:30%;
-	font-weight: 500;
-	font-size: 1.1em;
-	min-width: 50%;
-	min-height: 40vh;
-	
-	
-}
-.userSection{
-	border: 1px solid black;
-	padding-top:1%;
-	
-}
-.userActionSection{
-	border: 1px solid black;
-	
-}
-/*end profile page */
-
-
-/*Gallery specific Page*/
-.flex{
-	display:flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
-}
-.btn.btn-primary {
-	font-size:0.9em;
-}
-
-
-
-/*end Gallery Speicif Page */
-/* Cart start*/
-
-.cart{
-	box-sizing: border-box;
-	margin:0;
-	min-height: 50vh;
-	display:grid;
-	grid-template-columns:250px auto minmax(450px,500px);
-	grid-template-areas:
-		"products products order"
-		"bottomCart bottomCart bottomCart"
-	;
-}
-.productsCart,.orderCart,.bottomCart{margin: 1px;}
-.productsCart{
-	background:rgb(201, 38, 38);
-	grid-area: products;
-}
-.orderCart{
-	background:blueviolet;
-	grid-area: order;
-}
-.bottomCart{
-	background:seagreen;
-	grid-area: bottomCart;
-}
-.Cart{
-	min-width: 100px;
-	max-width: 250px;
-}
-.gridLogoCart{
-	margin:0;
-	min-height:15vh;
-	max-width: 15vh;
-	display:grid;
-	grid-template-columns:300px 900px;
-	grid-template-areas: 
-		"Cart Logo"
-	;
-}
-.gridLogo{
-	grid-area: Logo;
-}
-.gridCart{
-	grid-area: Cart;
-}
-@media screen and (min-width:300px ) and (max-width:480px){
-	.gridLogoCart{
-		grid-template-columns: 100px 200px;
+	.accountPage .w-100{
+		display: block;
 	}
-}
-/* Cart end*/
-.backgroundMain{
-	background-image:url('../images/demo/backgrounds/233.jpg');
-	max-width:100%;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	height:70vh;
-	position: relative;
-}
-.backgroundMain .after {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-    color: black;
-	background: rgba(0, 0, 0, .55);
-	z-index: 0;
-	position: absolute;
-}
-#footer{
-	font-size:20px;
-	font-weight: 600;
 }

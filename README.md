@@ -20,10 +20,13 @@ Technologies included:
 - bootstrap
 - MongoDB
 - Handlebars
-- Responsive
 
-External APIs:
-- YPAY for secure credit-card purchases.
+Extras:
+- Responsive
+- Login and Register included
+- User Managment.
+- External APIs
+  - YPAY for secure credit-card purchases.
 
 
 

@@ -17,14 +17,12 @@ MyObject = {
     //async - await function for footer categories
     footer : async function forall () {
         var footer = await Category.find({});
-        console.log('MyObject', footer)
         return footer;
     }
 }
 router.get('/gallery',async (req,res)=>{
    //let footer = await forall();
    let footer = await MyObject.footer();
-   console.log('gallery', footer);
    res.render('pages/gallery', {category : footer}) 
 });
 

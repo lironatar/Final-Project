@@ -13,8 +13,8 @@ require("../Models/Category");
 const Category = mongoose.model('category');
 
 router.get('',alreadyAuth,async (req,res)=>{
-        var data = await Category.find({});
-        res.render('users/login', {category:data})
+    var data = await Category.find({});
+    res.render('users/login', {category:data})
 });
 
 
@@ -22,7 +22,7 @@ router.post('',loginPostLimiter,alreadyAuth, (req,res, next)=>{
      //Instead of doing my own custom function, We will call
         //Passport.authenticate
     passport.authenticate('local', { // 'local'  is in config
-        successRedirect:'/home',
+        successRedirect:'/',
         failureRedirect:'/login',
         failureFlash: true,
         successFlash: true//req.flash('success_msg', `Welcome ${req.body.email}`)

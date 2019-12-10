@@ -25,7 +25,7 @@ const {globalApiLimiter} = require('./helper/limiter');
 //Profile Route
 const profile = require('./routes/profileManagment');
 //Products Routes
-const pages = require('./routes/pages');
+const store = require('./routes/products');
 const cart = require('./routes/cart');
 const adminRouter = require('./routes/adminBro');
 //DB config 
@@ -110,7 +110,7 @@ app.get('',globalApiLimiter, (req,res)=>{
     })
     
 });
-app.get('/pages/about_us', globalApiLimiter, (req,res)=>{
+app.get('/about_us', globalApiLimiter, (req,res)=>{
     Category.find({}).then(data =>{
         res.render('pages/about_us', {category:data});
     })
@@ -119,12 +119,12 @@ app.get('/pages/about_us', globalApiLimiter, (req,res)=>{
 
 
 // Use Routes
-app.use('/admin',ensureAuth,isAdmin,adminRouter);
-app.use('/pages', pages,globalApiLimiter);
+app.use('/admin', ensureAuth, isAdmin, adminRouter);
+app.use('/store', store, globalApiLimiter);
 app.use('/cart', cart);
-app.use('/login', login,apiLimiter,alreadyAuth);
-app.use('/register', register,alreadyAuth, globalApiLimiter);
-app.use('/pages/contact_us', contact_us,globalApiLimiter);
+app.use('/login', login, apiLimiter, alreadyAuth);
+app.use('/register', register, alreadyAuth, globalApiLimiter);
+app.use('/contact_us', contact_us, globalApiLimiter);
 app.use('/profile', profile, ensureAuth, globalApiLimiter);
 
 

@@ -10,9 +10,9 @@ This is my final project for software practical engineer & cyber professional de
 **Status**:
 In Progress, Estimated completion date is 12/20/2019.
 ## Technologies
-Written in Node.js, Express as framework.\
+Written in Node.js, Express as framework.
 
-Model: Client-Server.\
+Model: Client-Server.
 
 Technologies included:
 - Html 5.

@@ -144,4 +144,11 @@ router.post('/ChangePass',ensureAuth, (req,res)=>{
     
 });
 
+//Logout Route
+router.get('/logout', (req,res)=>{
+    req.logOut();
+    req.flash('success', 'התנתקת בהצלחה');
+    res.redirect('/');
+})
+
 module.exports = router;

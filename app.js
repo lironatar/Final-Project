@@ -28,6 +28,8 @@ const profile = require('./routes/profileManagment');
 const store = require('./routes/products');
 const cart = require('./routes/cart');
 const adminRouter = require('./routes/adminBro');
+// Load helpers
+const footer = require('./helper/footer');
 //DB config 
 const db = require('./config/db');
 
@@ -104,17 +106,14 @@ app.use(function(req,res,next){
 
 
 //Get Routes
-app.get('',globalApiLimiter, (req,res)=>{
-    Category.find({}).then(data =>{
-        res.render('index', {category:data});
-    })
-    
+app.get('',globalApiLimiter, async(req,res)=>{
+    let data = await footer.Footer();
+    res.render('index', {category:data});
 });
-app.get('/about_us', globalApiLimiter, (req,res)=>{
-    Category.find({}).then(data =>{
-        res.render('pages/about_us', {category:data});
-    })
-})
+app.get('/about_us', globalApiLimiter, async (req,res)=>{
+    let data = await footer.Footer();
+    res.render('pages/about_us', {category:data});
+});
 
 
 
@@ -128,12 +127,7 @@ app.use('/contact_us', contact_us, globalApiLimiter);
 app.use('/profile', profile, ensureAuth, globalApiLimiter);
 
 
-//Logout Route
-app.get('/logout', (req,res)=>{
-    req.logOut();
-    req.flash('success', 'התנתקת בהצלחה');
-    res.redirect('/home');
-})
+
 const port = process.env.PORT || 5000;
 
 app.listen(port, ()=>{

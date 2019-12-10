@@ -20,21 +20,11 @@ Technologies included:
 - bootstrap
 - MongoDB
 - Handlebars
+- Responsive
 
 External APIs:
 - YPAY for secure credit-card purchases.
 
-## Project Pros and Cons
-### Pros:
-- Implementation of external API. 
-- Responsive.
-- Included login and register routes, With custom validations.
-- 
-
-### Cons:
-- Some of the Css codes are a bit messy and repetitive.
-- Need to work on my Javascript ES6 implementation.
--
 
 
 

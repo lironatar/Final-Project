@@ -13,18 +13,18 @@ In Progress, Estimated completion date is 12/20/2019.
 Written in Node.js, Express as framework.\
 Model: Client-Server.\
 Technologies included:
-- Html 5
-- Css 3
-- JS ES6
-- Vanilla JS
-- bootstrap
-- MongoDB
-- Handlebars
+- Html 5.
+- Css 3.
+- JS ES6.
+- Vanilla JS.
+- bootstrap.
+- MongoDB.
+- Handlebars.
 
 Extras:
-- Responsive
-- Login and Register included
-- User Managment
+- Responsive.
+- Login and Register included.
+- User Managment.
 - External APIs
   - YPAY for secure credit-card purchases.
 

@@ -24,7 +24,7 @@ Technologies included:
 Extras:
 - Responsive
 - Login and Register included
-- User Managment.
+- User Managment
 - External APIs
   - YPAY for secure credit-card purchases.
 

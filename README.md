@@ -25,7 +25,7 @@ Extras:
 - Responsive.
 - Login and Register included.
 - User Managment.
-- External APIs
+- External APIs:
   - YPAY for secure credit-card purchases.
 
 

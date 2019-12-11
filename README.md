@@ -29,3 +29,10 @@ Extras:
 - User Managment.
 - External APIs:
   - YPAY for secure credit-card purchases.
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> a203b795d3432dac7c39f45247d7f6d9be891ad7

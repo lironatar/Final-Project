@@ -1,19 +1,14 @@
 const express = require ('express');
 const router = express.Router();
-const mongoose= require('mongoose');
-const sanitize= require('mongo-sanitize');
 const passport=require('passport');
-const {SHA256} = require('crypto-js');
-const{loginPostLimiter}= require('../helper/limiter');
-const {apiLimiter} = require('../helper/limiter');
+const {loginPostLimiter}= require('../helper/limiter');
 const {alreadyAuth} = require('../helper/auth');
-require('../Models/User');
-const User = mongoose.model('user');
-require("../Models/Category");
-const Category = mongoose.model('category');
+
+require("../Models/Gallery");
+const globalHelper = require("../helper/globalHelpers");
 
 router.get('',alreadyAuth,async (req,res)=>{
-    var data = await Category.find({});
+    var data = await globalHelper.Footer();
     res.render('users/login', {category:data})
 });
 

@@ -3,12 +3,12 @@ const router = express.Router();
 const mongoose= require('mongoose');
 
 
-require("../Models/Category");
-const Category = mongoose.model('category');
+require("../Models/Gallery");
+const Gallery = mongoose.model('gallery');
 require("../Models/Products");
 const Products = mongoose.model('products')
-require("../Models/CategoryImages");
-const CategoryImages = mongoose.model('CategoryImages');
+require("../Models/SubGallery");
+const SubGallery = mongoose.model('subGallery');
 //const {globalApiLimiter} = require('../helper/limiter');
 //var S = require('string');
 
@@ -16,13 +16,14 @@ const CategoryImages = mongoose.model('CategoryImages');
 MyObject = {
     //async - await function for footer categories
     footer : async function forall () {
-        var footer = await Category.find({});
+        var footer = await Gallery.find({});
         return footer;
     }
 }
 router.get('/gallery',async (req,res)=>{
    //let footer = await forall();
    let footer = await MyObject.footer();
+   let category = 
    res.render('pages/gallery', {category : footer}) 
 });
 

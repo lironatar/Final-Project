@@ -2,15 +2,14 @@ const express = require ('express');
 const router = express.Router();
 const nodemailer= require('nodemailer');
 const {postLimiter} = require('../helper/limiter');
-const mongoose = require('mongoose');
-require("../Models/Category");
-const Category = mongoose.model('category');
 
-router.get('', (req,res)=>{
-    Category.find({}).then(data =>{
-        res.render('pages/contact_us', {category:data})
-    }) 
-});
+
+const globalHelper = require('../helper/globalHelpers');
+
+router.get('', async(req,res)=>{
+    let footer = await globalHelper.Footer();
+    res.render('pages/contact_us', {category:footer})
+}) 
 
 
 /*router.post('', (req, res) => {

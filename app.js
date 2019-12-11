@@ -29,7 +29,7 @@ const store = require('./routes/products');
 const cart = require('./routes/cart');
 const adminRouter = require('./routes/adminBro');
 // Load helpers
-const footer = require('./helper/footer');
+const globalHelper = require('./helper/globalHelpers');
 //DB config 
 const db = require('./config/db');
 
@@ -42,10 +42,7 @@ mongoose.connect(db.mongoURI,
 {useUnifiedTopology: true, useNewUrlParser: true});
 mongoose.set('useCreateIndex', true);
 // DB dynmaic 
-require('./Models/Category');
-const Category = mongoose.model('category');
-require("./Models/User")
-const User= mongoose.model('user');
+
 //Handlebars template enginer Middleware
 // express-handlebars helpers
 const exphbs = require('express-handlebars');
@@ -107,11 +104,11 @@ app.use(function(req,res,next){
 
 //Get Routes
 app.get('',globalApiLimiter, async(req,res)=>{
-    let data = await footer.Footer();
+    let data = await globalHelper.Footer();
     res.render('index', {category:data});
 });
 app.get('/about_us', globalApiLimiter, async (req,res)=>{
-    let data = await footer.Footer();
+    let data = await globalHelper.Footer();
     res.render('pages/about_us', {category:data});
 });
 

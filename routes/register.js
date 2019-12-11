@@ -1,21 +1,18 @@
 const express = require ('express');
 const mongoose= require('mongoose');
-const jwt= require('jsonwebtoken');
-const my_secret ='My Little Secret';
-const passport=require('passport');
 const {SHA256} = require('crypto-js');
 const sanitize= require('mongo-sanitize');
 const router = express.Router();
 const {alreadyAuth} = require('../helper/auth');
 
-require("../Models/Category");
-const Category = mongoose.model('category');
 
-router.get('', alreadyAuth,(req,res)=>{
-    Category.find({}).then(data =>{
-        res.render('users/register', {category:data})
-    }) 
-});
+
+const footer = require('../helper/globalHelpers');
+router.get('', alreadyAuth,async(req,res)=>{
+    let data = await footer.Footer();
+    res.render('users/register', {category:data})
+}); 
+
 
 //Load User Schema
 require("../Models/User")

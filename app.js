@@ -18,7 +18,7 @@ const contact_us = require('./routes/contact_us');
 const {ensureAuth} = require('./helper/authtrue');
 const {alreadyAuth} = require('./helper/auth');
 const {isAdmin} = require('./helper/admin');
-const {NoAdmin} = require('./helper/NoAdmin');
+
 //Limiters
 const {apiLimiter} = require('./helper/limiter');
 const {globalApiLimiter} = require('./helper/limiter');
@@ -39,7 +39,7 @@ require("./config/passport")(passport);
 
 //Connect to MongoDB
 mongoose.connect(db.mongoURI,
-{useUnifiedTopology: true, useNewUrlParser: true});
+{ useNewUrlParser: true});
 mongoose.set('useCreateIndex', true);
 // DB dynmaic 
 

@@ -22,18 +22,17 @@ MyObject = {
 }
 router.get('/gallery',async (req,res)=>{
    //let footer = await forall();
-   let footer = await MyObject.footer();
-   let category = 
-   res.render('pages/gallery', {category : footer}) 
+   let data = await MyObject.footer();
+   res.render('pages/gallery', {category : data}) 
 });
 
 
 router.get('/gallery/:title', async(req,res)=>{
     let footer = await MyObject.footer();
     try{
-        let Images = await SubGallery.find({title:req.params.title});
-        let title = Images[0].title;
-        res.render('pages/categoryimages',{Images : Images, title:title, category : footer});
+        let sub = await SubGallery.find({galleryTitle:req.params.title});
+        let title = sub[0].title;
+        res.render('pages/categoryimages',{Images : sub, title:title, category : footer});
     }catch(err){
         let statusCode = '404'
         let errorText = 'מצטערים, כרגע אין מוצר'

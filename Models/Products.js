@@ -7,6 +7,7 @@ const ProductsSchema = new Schema({
 
     title: String,
     quantity: Array,
+    pics: [String],
     type: [String]
 
 

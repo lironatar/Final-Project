@@ -31,7 +31,7 @@ router.get('/gallery',async (req,res)=>{
 router.get('/gallery/:title', async(req,res)=>{
     let footer = await MyObject.footer();
     try{
-        let Images = await CategoryImages.find({title:req.params.title});
+        let Images = await SubGallery.find({title:req.params.title});
         let title = Images[0].title;
         res.render('pages/categoryimages',{Images : Images, title:title, category : footer});
     }catch(err){

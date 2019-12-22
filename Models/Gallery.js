@@ -6,7 +6,7 @@ const Schema= moongose.Schema;
 const GallerySchema = new Schema({
     pic: String,
     text: String,
-    title: String
+    galleryTitle: String,
 });
 //mongoose.model('collection_name', Schema_name)
 moongose.model('gallery', GallerySchema);

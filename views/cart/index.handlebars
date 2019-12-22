@@ -1,11 +1,63 @@
-<div class="cart">
-    <div class="productsCart">
-        products
-    </div>
-    <div class="orderCart">
-        order
-    </div>
-    <div class="bottomCart">
-        bottom
-    </div>
+<!-- Cart Display-->
+{{#if (cartIsEmpty) }}
+
+<table class="table container" dir="rtl" style="width:90%; font-size:21px">
+    <thead style="text-align:right">
+        <tr>
+            <th scope="col" style="width:20%;">תמונה</th>
+            <th scope="col">גודל</th>
+            <th scope="col">כמות</th>
+            <th scope="col">מחיר</th>
+            <th scope="col">הנחה</th>
+            {{#if (isUser)}}
+            <th scope="col">סה"כ לאחר הנחה</th>
+            {{else}}
+            <th scope="col">סה"כ</th>
+            {{/if}}
+        </tr>
+    </thead>
+    {{#each cart}}
+    <tbody style="text-align: right;">
+        <tr style="">
+            <td><img src="{{pic}}" style="width:150px; height:150px;"></td>
+            <td>{{size}}</td>
+            <td>{{quantity}}</td>
+            <td>{{price}}</td>
+            {{#if (isUser)}}
+            <td>5%</td>
+            {{else}}
+            <td style="width:15%"><a href="/register" style="font-size: 20px;">הנחה למשתמשים רשומים</a></td>
+            {{/if}}
+            <td>{{totalPrice}}</td>
+        </tr>
+    </tbody>
+    {{/each}}
+</table>
+
+
+<!-- Buy Button-->
+
+{{#unless user}}
+<div class="row" style="margin:0 auto">
+    <h4 style="margin:inherit">משתשמים רשומים נהנים מ5% הנחה!</h4>
+    <div class="w-100"></div>
+    <a href="/register#here" style="margin: inherit;"><h4>שווה להירשם</h4></a>
 </div>
+<br>
+{{/unless}}
+<div style="text-align: center; font-size:24px;">
+    <button type="button" class="btn btn-primary">העברה לתשלום בטוח <i class="fa fa-shield" aria-hidden="true"></i></button>
+    <br>
+    
+    <br>
+    <form action="/cart/paypal" method="POST">
+        <button type="submit" value="Buy" class="btn btn-primary">תשלום באמצעות Paypal</button>
+    </form>
+</div>
+{{/if}}
+{{#unless (cartIsEmpty)}}
+<div class="container" style="text-align: center; font-size: 24px" >
+    <h3>העגלה שלך ריקה, אתה מוזמן לבקר בחנות</h4>
+    <button type="button" class="btn btn-primary"><a href="/store/gallery#here" style="color: white;">חנות המוצרים >></a></button>
+</div>
+{{/unless}}

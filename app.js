@@ -39,7 +39,7 @@ require("./config/passport")(passport);
 
 //Connect to MongoDB
 mongoose.connect(db.mongoURI,
-{ useNewUrlParser: true});
+{ useUnifiedTopology:true ,useNewUrlParser: true});
 mongoose.set('useCreateIndex', true);
 // DB dynmaic 
 
@@ -48,7 +48,6 @@ mongoose.set('useCreateIndex', true);
 const exphbs = require('express-handlebars');
 const hbs = exphbs.create({
     defaultLayout:'main',
-
     // Custom Helpers
     helpers:{
         calculation: function(value){
@@ -79,7 +78,7 @@ app.use(session({
     resave: true,
     saveUninitialized: true,
     store: new MongoStore({mongooseConnection: mongoose.connection}),//MongoStore saves session
-    cookie: {maxAge: 60 * 60 * 1000},
+    cookie: {maxAge: 60 * 60 *10000},
 }));
 
 //Passport and session configuration
@@ -93,10 +92,12 @@ app.use(flash());
 
 // Flash Messages
 app.use(function(req,res,next){
+    //make sure you can always access it on every template
+    //without needeing to pass it explicity
     res.locals.success = req.flash('success');
     res.locals.error = req.flash('error');
     res.locals.errors= req.flash('errors');
-    res.locals.session = req.session;
+    res.locals.session = req.session; 
     res.locals.user = req.user || null; 
     next();
 });

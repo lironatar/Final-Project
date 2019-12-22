@@ -1151,6 +1151,10 @@ img{max-width:100%;}
 .color-carousel:hover{
 	background-color:gray;
 }
+.product{
+	margin-top:-7%; 
+	margin-right:10%;
+}
 .product .form-control{
 	width:25%;
 	font-size:inherit;
@@ -1406,24 +1410,15 @@ ul .fa-facebook{
 		min-height: 250px;
 		max-height: 250px;
 	}
-	.container .product{
-		height:2000px;
-	}
+
 	.product .form-control{
 		width:50%;
-	}
-	.product{
-		height:160vh;
 	}
 	.color-carousel{ 
 	margin-top:27%;
 	border:1.5px solid black;
 	}
-	.cardMobile{
-		
-	}
-	.accountPage{
-		
+	.accountPage{	
 		min-height: 60vh;
 		max-height: 100vh;
 		width: 100vw;
@@ -1434,4 +1429,12 @@ ul .fa-facebook{
 	.accountPage .w-100{
 		display: block;
 	}
+	.container.product{
+		min-height: 135vh;
+		max-height: 200vh;
+		margin-right:2%;
+	}
+}
+.fa-shopping-cart{
+	
 }

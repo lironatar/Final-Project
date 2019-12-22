@@ -32,7 +32,7 @@ router.get('/gallery/:title', async(req,res)=>{
     try{
         let sub = await SubGallery.find({galleryTitle:req.params.title});
         let title = sub[0].title;
-        res.render('pages/categoryimages',{Images : sub, title:title, category : footer});
+        res.render('pages/categoryImages',{Images : sub, title:title, category : footer});
     }catch(err){
         let statusCode = '404'
         let errorText = 'מצטערים, כרגע אין מוצר'
@@ -40,28 +40,33 @@ router.get('/gallery/:title', async(req,res)=>{
     }
     
 })
-router.get('/products/:imageTitle', async (req,res)=>{
-    let imageTitle = "פולדרים מגניבים"
+router.get('/products/:subGalleryTitle', async (req,res)=>{
 
-    let product = await Products.findOne({imageTitle: req.params.imageTitle});
+    let product = await Products.findOne({subGalleryTitle: req.params.subGalleryTitle});
     let footer = await MyObject.footer();
-    res.render('pages/products', {product:product, category: footer,
+    let activePic = product.mainPic;
+    res.render('pages/products', {product:product, category: footer, activePic:activePic,
     helpers: {
         carousel : function() {
-            let index = product.examplepics;
+            let index = product.pics;
             let i=0;
             let indexArray =[]
             index.forEach(element => {
-                i++;
                 indexArray.push(i);
             });
-            i--;
+            
+            
             return indexArray; 
         }
     }
     });
 })
 
-
+router.post('/products/:subGalleryTitle', async(req,res)=>{
+    req.body.quantity = await parseInt(req.body.quantity);
+    req.body.price = await parseInt(req.body.price);
+    req.session.cart = req.body;
+    res.redirect('/cart');
+})
 
 module.exports = router;

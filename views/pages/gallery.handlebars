@@ -1,18 +1,18 @@
-<h2 style="text-align: center; font-size: 35px;">כאן תוכלו להזמין מוצרים </h4><br>
-  <div class="images flex" style="overflow: hidden; text-align:center;">
-    {{#each category}}
-      <div class ="phoneImg" style="background-color:white; overflow:hidden; font-size:18px; font-family:alef-regular,sans-serif; font-weight:400">
-        <h4 style="font-size:22px; font-weight:500">{{title}}</h4>
-        <div class="ImagesInside"><a href="/store/gallery/{{title}}#here"><img src="{{pic}}"></a></div>
-        <hr style="margin:0 auto; width:90%;">
-        <p style="height: 83px; margin-top:2%; overflow:hidden;font-size:1.1em">{{text}}</p>
-        <hr>
-        <a class="btn btn-primary ImagesInside" style="font-size:1.25em; padding:8px 16px 9px 16px;" href="/store/gallery/{{title}}#here" role="button">המשך >></a>
-      </div>
-    {{/each}}
-    
+<h2 style="text-align: center; font-size: 35px;">כאן תוכלו להזמין מוצרים </h2>
+<br>
+<div class="images flex" style="overflow: hidden; text-align:center;">
+  {{#each category}}
+  <div class ="phoneImg" style="background-color:white; overflow:hidden; font-size:18px; font-family:alef-regular,sans-serif; font-weight:400">
+    <h4 style="font-size:22px; font-weight:500">{{galleryTitle}}</h4>
+    <div class="ImagesInside"><a href="/store/gallery/{{galleryTitle}}#here"><img src="{{pic}}"></a></div>
+    <hr style="margin:0 auto; width:90%;">
+    <p style="height: 83px; margin-top:2%; overflow:hidden;font-size:1.1em">{{text}}</p>
+    <hr>
+    <a class="btn btn-primary ImagesInside" style="font-size:1.25em; padding:8px 16px 9px 16px;" href="/store/gallery/{{galleryTitle}}#here" role="button">המשך >></a>
   </div>
-  
+  {{/each}}
 </div>
+
+
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->

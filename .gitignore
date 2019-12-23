@@ -1,6 +1,7 @@
 package-lock.json
 node_modules
-config/db.js
+config
 routes/adminBro.js
 helper/admin.js
 .adminbro
+

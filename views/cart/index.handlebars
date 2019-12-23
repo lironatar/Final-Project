@@ -1,5 +1,5 @@
 <!-- Cart Display-->
-{{#if (cartIsEmpty) }}
+{{#if (cartIsFull) }}
 
 <table class="table container" dir="rtl" style="width:90%; font-size:21px">
     <thead style="text-align:right">
@@ -55,9 +55,10 @@
     </form>
 </div>
 {{/if}}
-{{#unless (cartIsEmpty)}}
+{{#if (cartIsEmpty)}}
 <div class="container" style="text-align: center; font-size: 24px" >
     <h3>העגלה שלך ריקה, אתה מוזמן לבקר בחנות</h4>
     <button type="button" class="btn btn-primary"><a href="/store/gallery#here" style="color: white;">חנות המוצרים >></a></button>
 </div>
-{{/unless}}
+{{/if}}
+
